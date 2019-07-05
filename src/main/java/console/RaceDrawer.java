@@ -96,7 +96,7 @@ public class RaceDrawer {
             System.out.println("Enemy race is: "+enemyRace+"! :)");
             return 2;
         }else if (userSelection ==3){
-            System.out.println("Your race is: "+ownRace+"! -  and Enemy race is: "+ enemyRace+"! :)");
+            System.out.println("Your race is: "+ownRace+"! -  Enemy race is: "+ enemyRace+"! :)");
             return 2;
         }else{
             System.out.println("Error!");

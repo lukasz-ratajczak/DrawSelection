@@ -15,12 +15,12 @@ public class Main {
         while (condition != 0) {
             if (condition == 1) {
 
-                condition = raceDrawer.showRandomizedRaces(getDrawOptionFromUser(),raceDrawer.raceIndivualChecker(ownRace,enemyRace),raceDrawer.raceIndivualChecker(ownRace,enemyRace));
+                condition = raceDrawer.showRandomizedRaces(getDrawOptionFromUser(), raceDrawer.raceIndivualChecker(ownRace, enemyRace), raceDrawer.raceIndivualChecker(ownRace, enemyRace));
             } else if (condition == 2) {
                 condition = optionSelection();
-            }else if (condition == 3){
-                condition = raceDrawer.showRandomizedRaces(getDrawOptionFromUser(),raceDrawer.raceIndivualChecker(ownRace,enemyRace),raceDrawer.raceIndivualChecker(ownRace,enemyRace));
-            }else if (condition == 9){
+            } else if (condition == 3) {
+                condition = raceDrawer.showRandomizedRaces(getDrawOptionFromUser(), raceDrawer.raceIndivualChecker(ownRace, enemyRace), raceDrawer.raceIndivualChecker(ownRace, enemyRace));
+            } else if (condition == 9) {
                 System.out.println("Gettin' back to options ;/");
                 condition = 2;
             } else {
@@ -50,6 +50,7 @@ public class Main {
         System.out.println("You chose option: " + userSelection + " :)");
         return userSelection;
     }
+
     public static int optionSelection() {
         Scanner scanner = new Scanner(System.in);
         int optionInt = 9;
@@ -64,9 +65,11 @@ public class Main {
         }
         if (!option || optionInt < 1 || optionInt > 3) {
             return 9;
-        } else if (optionInt == 2){
-            return optionInt + 1;
-        } else{
+        } else if (optionInt == 3) {
+            return 10;
+        } else if ( optionInt == 2){
+          return optionInt + 1;
+        } else {
             return optionInt;
         }
     }
